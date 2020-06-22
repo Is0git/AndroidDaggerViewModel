@@ -1,9 +1,6 @@
 package com.example.daggerviewmodelfragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerFragment
@@ -24,5 +21,4 @@ abstract class DaggerViewModelFragment<T : ViewModel>(var clazz: Class<T>) : Dag
     private fun createViewModel(): T {
         return ViewModelProvider(this, factory).get(clazz)
     }
-
 }
